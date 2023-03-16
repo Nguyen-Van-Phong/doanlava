@@ -5,6 +5,7 @@ use App\Http\Controllers\OrderController;
 use App\Http\Controllers\OrderItemController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -55,7 +56,7 @@ Route::resource('orders',OrderController::class);
 Route::resource('orderitems',OrderItemController::class);
 Route::get('/child',function(){
     return view('child');
-});
+})->middleware('checklogin');
 Route::get('/admin',function(){
     return view('admin.layout');
 });
@@ -71,3 +72,6 @@ Route::group(['prefix' => 'admin'], function(){
     Route::resource('categories', App\Http\Controllers\Admin\CategoryController::class,['names' =>'admin.categories']);
    
 });
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
