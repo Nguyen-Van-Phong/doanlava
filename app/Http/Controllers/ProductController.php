@@ -85,5 +85,14 @@ class ProductController extends Controller
     {
         //
     }
-   
+    public function cart()
+    {
+        return view('cart');
+    }
+  
+    /**
+     * Write code on Method
+     *
+     * @return response()
+     */
 }

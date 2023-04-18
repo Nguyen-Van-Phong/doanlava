@@ -5,7 +5,7 @@
       <img class="d-block w-100" src="" alt="First slide">
     </div>    
     <div class="carousel-item">
-      <img class="d-block w-100" src="./images/banner-01.ipg" alt="Second slide">
+      <img class="d-block w-100" src="./laravel/public/images/banner-01.jpg" alt="Second slide">
     </div>
     <div class="carousel-item">
       <img class="d-block w-100" src="./images/banner-01.ipg" alt="Third slide">
